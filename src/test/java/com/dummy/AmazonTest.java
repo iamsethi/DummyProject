@@ -14,6 +14,7 @@ public class AmazonTest {
 
 	@BeforeMethod
 	public void setUp() {
+		driver = GridDemo.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
 
