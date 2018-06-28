@@ -1,1 +1,5 @@
-com\dummy\AppTest.class
+com\dummy\runner\TestRunner.class
+com\dummy\Log4jDemo.class
+com\dummy\GetCoordinatesDemo.class
+com\dummy\get.class
+com\dummy\stepdefinition\UserStepDefinition.class
