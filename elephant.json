@@ -1,0 +1,18 @@
+{
+	"id": 7654,
+	"category": {
+		"id": 0,
+		"name": "string"
+	},
+	"name": "elephant",
+	"photoUrls": [
+		"string"
+	],
+	"tags": [
+		{
+			"id": 0,
+			"name": "string"
+		}
+	],
+	"status": "available"
+}
