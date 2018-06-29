@@ -25,6 +25,7 @@ public class AndroidDemo {
 
 	// adb shell
 	// generic_x86:/ $ dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
+	// set path C:\Program Files\Java\jdk1.8.0_171\bin
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
