@@ -28,13 +28,11 @@ public class IOSDemo {
 		// --data-binary @C:/Users/ketan.sethi/Downloads/TestApp.app.zip
 
 		DesiredCapabilities caps = DesiredCapabilities.iphone();
-		caps.setCapability("appiumVersion", "1.8.1");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X Simulator");
-		caps.setCapability("deviceOrientation", "portrait");
-		caps.setCapability("platformVersion", "11.3");
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.3");
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-		caps.setCapability("browserName", "");
-		caps.setCapability("app", "sauce-storage:TestApp.app.zip");
+		caps.setCapability(MobileCapabilityType.BROWSER_NAME, "");
+		caps.setCapability(MobileCapabilityType.APP, "sauce-storage:TestApp.app.zip");
 
 		URL sauceUrl = new URL(
 				"http://ketansethi7861:3a1acfcb-d583-4843-ae27-0de1e2dc1207@ondemand.saucelabs.com:80/wd/hub");
@@ -56,9 +54,10 @@ public class IOSDemo {
 		WebDriverWait wdw = new WebDriverWait(driver, 30);
 		wdw.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("TextField1")))
 				.sendKeys("10000");
-
+		// Accessibility ID (formerly Name property does the same job)
 		wdw.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("TextField2")))
 				.sendKeys("20000");
+		// Accessibility ID (formerly Name property does the same job)
 
 		wdw.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId("Compute Sum"))).click();
 

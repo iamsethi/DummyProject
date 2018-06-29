@@ -5,17 +5,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
@@ -25,7 +26,7 @@ public class AndroidDemo {
 
 	// adb shell
 	// generic_x86:/ $ dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
-	// set path C:\Program Files\Java\jdk1.8.0_171\bin
+	// set path = C:\Program Files\Java\jdk1.8.0_171\bin
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
@@ -44,10 +45,9 @@ public class AndroidDemo {
 
 	@Test
 	public void testApp() {
-
-		AndroidElement openDialogButton = (AndroidElement) driver
-				.findElement(By.id("io.appium.android.apis:id/two_buttons"));
-		openDialogButton.click();
+		WebDriverWait wdw = new WebDriverWait(driver, 30);
+		wdw.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id("io.appium.android.apis:id/two_buttons")))
+				.click();
 
 	}
 
