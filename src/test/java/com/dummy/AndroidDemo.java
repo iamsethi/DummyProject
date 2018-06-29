@@ -23,6 +23,9 @@ public class AndroidDemo {
 
 	public WebDriver driver;
 
+	// adb shell
+	// generic_x86:/ $ dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
+
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
