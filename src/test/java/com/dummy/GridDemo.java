@@ -14,10 +14,8 @@ import org.testng.annotations.Parameters;
 public class GridDemo {
 
 	// HUB- java -jar selenium-server-standalone-3.12.0.jar -role hub
-	// Node1:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub
-	// http://x.x.x.x:4444/grid/register/ -browser browserName=chrome
-	// Node2:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub
-	// http://x.x.x.x:4444/grid/register/ -browser browserName=firefox
+	// Node1:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub http://x.x.x.x:4444/grid/register/ -browser browserName=chrome
+	// Node2:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub http://x.x.x.x:4444/grid/register/ -browser browserName=firefox
 
 	public static WebDriver driver;
 
