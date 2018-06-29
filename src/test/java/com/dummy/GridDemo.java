@@ -13,9 +13,11 @@ import org.testng.annotations.Parameters;
 
 public class GridDemo {
 
-//HUB- java -jar selenium-server-standalone-3.12.0.jar -role hub
-//Node1:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub http://x.x.x.x:4444/grid/register/ -browser browserName=chrome
-//Node2:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub http://x.x.x.x:4444/grid/register/ -browser browserName=firefox
+	// HUB- java -jar selenium-server-standalone-3.12.0.jar -role hub
+	// Node1:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub
+	// http://x.x.x.x:4444/grid/register/ -browser browserName=chrome
+	// Node2:- java -jar selenium-server-standalone-3.12.jar -role webdriver -hub
+	// http://x.x.x.x:4444/grid/register/ -browser browserName=firefox
 
 	public static WebDriver driver;
 
@@ -31,7 +33,6 @@ public class GridDemo {
 			options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
 			options.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
 			driver = new RemoteWebDriver(new URL("http://192.168.1.6:4444/wd/hub"), options);
-
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			ChromeOptions options = new ChromeOptions();
 			options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
