@@ -49,6 +49,7 @@ public class AppiumDemo {
 
 	@AfterMethod
 	public void tearDown() {
+		driver.quit();
 
 	}
 
