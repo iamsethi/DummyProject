@@ -28,13 +28,17 @@ public class Debug {
 		String actual = driver.findElement(By.xpath("//span[text()='Create an account']")).getText();
 		System.out.println(actual);
 		String expected = "Create an account ";
+		
+		verify(actual, expected);
 
+	}
+
+	private void verify(String actual, String expected) {
 		if (actual.equals(expected)) {
 			System.out.println("Actual is equal to Expected TC - Pass");
 
 		} else
 			System.out.println("Actual is not equal to Expected TC - Fail");
-
 	}
 
 	@AfterMethod
